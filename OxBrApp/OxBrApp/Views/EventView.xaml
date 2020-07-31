@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:baseViewModel="clr-namespace:OxBrApp.ViewModels;assembly=OxBrApp"
+             baseViewModel:ViewModelLocator.AutoWireViewModel="true"
+             x:Class="OxBrApp.Views.EventView" >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content >
+
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Upcoming Races 2020/2021" BackgroundColor="{StaticResource pinkColor}" FontSize="18" TextColor="WhiteSmoke" 
+                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20"/>
+            </StackLayout>
+
+
+            <ListView SeparatorColor="LightBlue" x:Name="eventList" ItemsSource="{Binding Events}" HasUnevenRows="True" SelectedItem="{Binding SelectedEvent, Mode=TwoWay}" >
+                <ListView.Header>
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                          
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Race" HorizontalOptions="Fill"  Grid.Column="0" FontAttributes="Bold" Margin="1"/>
+                        <Label Text="Date" HorizontalOptions="Fill"  Grid.Column="1" FontAttributes="Bold" Margin="1"/>
+
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell Tapped="ViewCell_Tapped">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding RaceTitle}" Grid.Column="0"></Label>
+                                <Label Text="{Binding StartTime}" Grid.Column="1"></Label>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OxBrApp.Views.LoginView"
+             xmlns:baseViewModel="clr-namespace:OxBrApp.ViewModels;assembly=OxBrApp"
+             baseViewModel:ViewModelLocator.AutoWireViewModel="true"
+             xmlns:CustomBehaviors="clr-namespace:OxBrApp.CustomBehaviors;assembly=OxBrApp"
+             NavigationPage.HasNavigationBar ="false"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout x:Name="Logo" VerticalOptions="FillAndExpand">
+                <Image x:Name="ShipLogo" Source="ship.png" Margin="0,50,0,0" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand" Margin="20">
+
+                <Entry x:Name="txt_email" Placeholder="Email" Keyboard="Email" Text="{Binding Email}" TextColor="{StaticResource pinkColor}">
+                    <Entry.Behaviors>
+                    <CustomBehaviors:EventToCommandBehavior EventName="Focused" Command="{Binding OnEntryFocusedCommand}" />
+                    </Entry.Behaviors>
+                    </Entry>
+
+                <Entry x:Name="txt_password" Placeholder="Password" Text="{Binding Password}" IsPassword="True" TextColor="{StaticResource pinkColor}">
+                    <Entry.Behaviors>
+                        <CustomBehaviors:EventToCommandBehavior EventName="Completed" Command="{Binding LoginCommand}" />
+                        <CustomBehaviors:EventToCommandBehavior EventName="Focused" Command="{Binding OnEntryFocusedCommand}" />
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Label x:Name="loginError" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1" Text="Invalid email or password" TextColor="Red" IsVisible="{Binding IsLoginFailed}"></Label>
+
+                <Button x:Name="btn_login" Text="Login" BackgroundColor="{StaticResource pinkColor}" Command="{Binding LoginCommand}" />
+                <Button x:Name="btn_logout" Text="Log out" BackgroundColor="{StaticResource BlackColor}" HeightRequest="40" Clicked="btn_logout_Clicked" TextColor="White"/>
+                <Button x:Name="btn_signup" Text="Sign Up" BackgroundColor="WhiteSmoke" HeightRequest="40" TextColor="Black" BorderColor="Black" BorderWidth="1" Clicked="btn_signup_Clicked"/>
+
+            </StackLayout>
+
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

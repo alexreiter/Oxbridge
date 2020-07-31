@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+               xmlns:baseViewModel="clr-namespace:OxBrApp.ViewModels;assembly=OxBrApp" 
+             xmlns:local="clr-namespace:OxBrApp.Models"
+             baseViewModel:ViewModelLocator.AutoWireViewModel="true"
+             mc:Ignorable="d"
+             x:Class="OxBrApp.Views.MapView">
+
+    <local:CustomMap  x:Name="MyMap" MapType="Street" ItemsSource="{Binding Pins}">
+        <maps:Map.ItemTemplate>
+
+            <DataTemplate>
+                <maps:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding Label}" Type="{Binding Type}"></maps:Pin>
+            </DataTemplate>
+            
+        </maps:Map.ItemTemplate>
+       
+    </local:CustomMap>
+
+</ContentPage>

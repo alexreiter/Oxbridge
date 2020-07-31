@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OxBrApp.Views.RaceView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="blue">#241571</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+    
+    
+
+    <StackLayout BackgroundColor="LightBlue" >
+            
+            <Frame x:Name="frame" HasShadow="True" Padding="4" Margin="7" CornerRadius="7">
+                <StackLayout Padding="10">
+                    <Label Text="Race" FontSize="24" TextColor="CornflowerBlue"></Label>
+                    <Label  Text="{Binding SelectedEvent.RaceTitle}" FontSize="16" TextColor="Black" ></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame x:Name="secondFrame" HasShadow="True" Padding="4" Margin="7" CornerRadius="7">
+                <StackLayout Padding="10">
+                    <Label Text="Country" FontSize="24" TextColor="CornflowerBlue"></Label>
+                    <Label  Text="{Binding SelectedEvent.Country}" FontSize="16" TextColor="Black" ></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame x:Name="anotherFrame" HasShadow="True" Padding="4" Margin="7" CornerRadius="7">
+                <StackLayout Padding="10">
+                    <Label Text="City" FontSize="24" TextColor="CornflowerBlue"></Label>
+                    <Label  Text="{Binding SelectedEvent.City}" FontSize="16" TextColor="Black" ></Label>
+                </StackLayout>
+            </Frame>
+            
+            <Frame x:Name="lastFrame" HasShadow="True" Padding="4" Margin="7" CornerRadius="7">
+                <StackLayout Padding="10">
+                    <Label Text="Street" FontSize="24" TextColor="CornflowerBlue"></Label>
+                    <Label  Text="{Binding SelectedEvent.Street}" FontSize="16" TextColor="Black" ></Label>
+                </StackLayout>
+            </Frame>
+
+
+
+            <Frame x:Name="frameframe" HasShadow="True" Padding="4" Margin="7" CornerRadius="7">
+                <StackLayout Padding="10">
+                    <Label Text="Start Time" FontSize="24" TextColor="CornflowerBlue"></Label>
+                    <Label  Text="{Binding SelectedEvent.StartTime}" FontSize="16" TextColor="Black" ></Label>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Start Tracking" BackgroundColor="{StaticResource blue}" Command="{Binding NavigateToMap}"></Button>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.csprojAssemblyReference.cache
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\CustomNavigationPage.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\EventView.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\Map.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\MasterDetail.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Views\RaceView.xaml.g.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.csproj.CoreCompileInputs.cache
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.AssemblyInfoInputs.cache
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.AssemblyInfo.cs
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.dll
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\ref\Oxbridge App.dll
+C:\Users\alexa\source\repos\OxBrApp\OxBrApp\OxBrApp\obj\Debug\netstandard2.0\Oxbridge App.pdb
